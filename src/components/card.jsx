@@ -3,10 +3,10 @@ function Card(props){
     return(
     <div>
             <div className="card">
-            <img src={props.img} alt="" />
-                <h1>{props.heading}</h1>
+            <img src={props.image} alt=""/>
+                <h1>{props.pay}</h1>
                 <p>
-                    {props.heading}, {props.age}
+                    {props.post}, {props.company}
                 </p>
                 <button>Save <Bookmark size={15} /></button>
             </div>
@@ -14,4 +14,4 @@ function Card(props){
 
 )}
 
-export default Card;
+export default Card; 
