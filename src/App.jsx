@@ -1,9 +1,41 @@
 import Section1 from './components/Section1/Section1.jsx'
 import Section2 from './components/Section2/Section2.jsx'
 function App() {
+  const users =  [
+    {
+      img:'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      intro:'apply new styles to existing text. For example, to make text bold, you would use the font-weight property.', 
+      tag:'Satisfied',
+      color:'purple'
+    },
+    {
+      img:'https://plus.unsplash.com/premium_photo-1661398212553-5e87c91263c7?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      intro:'some long text that will be truncated if it exceeds the width of the container.', 
+      tag:'Underserved',
+      color:'pink'
+    },
+    {
+      img:'https://images.unsplash.com/photo-1758691737646-79dbce8e25fb?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      intro:'this is a long text that will be truncated if it exceeds the width of the container.', 
+      tag:'Unbanked',
+      color:'lightgreen'
+    },
+    {
+      img:'https://images.unsplash.com/photo-1758598497625-346365a9875b?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      intro:'lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, repellendus.', 
+      tag:'Waitlisted',
+      color:'gray'
+    },
+    {
+      img:'https://plus.unsplash.com/premium_photo-1672373833745-ac04484a96b7?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    intro:'lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, repellendus.',
+    tag:'Fullyimproved',
+    color:'orange'
+  }
+  ]
   return (
     <div>
-      <Section1 />
+      <Section1 users = {users} />
       <Section2 />
     </div>
   )

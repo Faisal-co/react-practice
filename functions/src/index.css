@@ -1,72 +1,4 @@
-@import "tailwindcss";
-
-#right::-webkit-scrollbar{
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} 
-body{
-  background-color: #020202;
-}
-.parent{
-  background-color: #333;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  border-radius: 10px;
-  gap: 20px;
-
-
-}
-.card{
-  border: 2px solid rgb(209, 205, 205);
-  width: 200px;
-  color: rgb(255, 255, 255);
-  margin: 50px;
-  padding: 20px;
-  justify-content: center;
-  border-radius: 15px;
-  align-items: center;
-}
-.card h1{
-  text-align: center;
-}
-.card img{
-  width: 100px;
-  border-radius: 50%;
-  margin-left: 50px;
-  height: 100px;
-}
-.card p{
-  text-align: center;
-  padding: 15px;
-}
-.card button{
-  background-color: rgb(22, 21, 99);
-  color: white;
-  border-radius: 10px;
-  align-items: center;
-  padding: 5px 10px;
-  margin-left: 50px;
-}
-*/
-
-
-/* :root {
+:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -76,7 +8,7 @@ body{
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility; 
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -134,4 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-*/

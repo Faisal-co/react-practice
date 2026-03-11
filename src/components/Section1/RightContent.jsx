@@ -1,8 +1,17 @@
-import React from 'react'
+import RightCard from './RightCard'
 
-const RightContent = () => {
+const RightContent = (props) => {
   return (
-    <div className='bg-blue-200 h-full w-2/4'>RightContent</div>
+    <div id = 'right' className='flex flex-nowrap overflow-x-auto gap-10 h-full w-[70%] p-4'>
+        {
+            props.users.map(function(elem, index){
+                return <RightCard key = {index} id ={index} image = {elem.img} tag = {elem.tag} intro = {elem.intro} color = {elem.color}/>
+            }
+
+            )
+        }
+
+    </div>
   )
 }
 
