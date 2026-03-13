@@ -1,6 +1,171 @@
-import Section1 from './components/Section1/Section1.jsx'
-import Section2 from './components/Section2/Section2.jsx'
-function App() {
+/*import Section1 from './components/Section1/Section1.jsx'
+import Section2 from './components/Section2/Section2.jsx'*/
+
+import { useState } from "react"
+// Form Handling and Preventing Page Refresh
+const App = () => {
+  const [title, setTitle] = useState('')
+  const submitHandler = (e)=>{
+    e.preventDefault()
+    console.log("form Submitted Successfully by", title) 
+    setTitle('') 
+  }
+  return (
+    <div>
+      <form onSubmit={(e)=>{
+        submitHandler(e)
+      }}>
+        <input type="text" placeholder="Enter your name" value={title}
+        onChange={(e)=>{
+          setTitle(e.target.value) // isko Submit Page Refresh se Prevent krna.
+        }}/>
+        <button>Submit</button>
+      </form>
+    </div>
+  )
+}
+
+export default App
+
+
+
+/*
+const App = () => {
+  const [num, setNum] = useState(5)
+  const btnClick = ()=>{// it is caled Batch Update
+    setNum(prev => (prev + 1))
+    setNum(prev => (prev + 1))
+    setNum(prev => (prev + 1))
+    setNum(prev => (prev + 1))
+    setNum(prev => (prev + 1))
+    
+  }
+  return (
+    <div>
+      <h1>{num}</h1>
+      <button onClick={btnClick}>Click</button>
+    </div>
+  )
+}
+
+export default App
+
+/*
+const App = () => {
+  const [num, setNum] = useState({a:"A",b:2})
+  function onClickChange(){
+    setNum(prev=>({...prev,a:'ABC'}))
+    setNum(prev=>({...prev,b:33.4465756}))
+  }
+  return (
+    <div>
+      <h1>{num.a} {num.b}</h1>
+      <button onClick={onClickChange}>Click</button>
+    </div>
+  )
+}
+
+export default App
+
+/*
+const App = () => {
+  const [num, setNum] = useState([10,'arsalan', 44.4])
+  const changeArray = () => {
+    const newNum = [...num]
+    newNum[1] = 'kanwal'
+    newNum[2] = 49.566666
+    newNum.push(8888888888888)
+    console.log(newNum)
+    setNum(newNum)
+    console.log(num)
+
+  }
+  return (
+
+    <div>
+      <h1>{num}</h1>
+      <button onClick={changeArray}>click</button>
+    </div>
+  )
+}
+export default App
+
+
+/*const App = () => {
+  const [m, setM] = useState({x:'abc', y:123})
+  const changeObject = ()=>{
+    const newk = {...m};
+    newk.x = 'faisal siraj'
+    newk.y = 7
+    setM(newk)
+  }
+  return (
+    <div>
+      <h1 className="bg-amber-300 w-[200px] h-[200px]">{m.x} {m.y}</h1>
+      <button onClick={changeObject}
+      className="bg-blue-400 w-30 h-10 p-2 border-4 rounded-[10px]">Click</button>
+    </div>
+  )
+}
+
+export default App
+
+/*const App = () => {
+  const [number, setNumber] = useState(0)
+
+  function Increase(){
+    setNumber(number+1)
+  }
+  function Decrease(){
+    setNumber(number-1)
+
+  }
+  return (
+    <div>
+      <div className="numBox"><h1>{number}</h1></div>
+      <button className="btn1" onClick={Increase}>Increase</button>
+      <button className="btn2" onClick={Decrease}>Decrease</button>
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+/*const App = () => {
+  const [a, seta] = useState(12)
+  const [name, setname] = useState('faisal')
+  const [arr, setArr] = useState([12,'sd',34,19])
+    function onClickChange(){
+      seta(15)
+      setname('siraj')
+      setArr(['a','b','c',1,2,3])
+
+    }
+  return (
+    <div>
+      <h1>Value of a is {a}</h1>
+      <h1>Value of name is {name}</h1>
+      <h1>Value of Array is {arr}</h1>
+      <button onClick={onClickChange}>Click</button>
+    </div>
+   
+  );
+};
+
+export default App;
+
+
+
+
+
+
+
+
+/*function App() {
   const users =  [
     {
       img:'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 

@@ -1,7 +1,56 @@
 @import "tailwindcss";
 
+
+input, button{
+  margin: 20px;
+  background-color: rgb(194, 191, 191);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+
+
+
+/*
 #right::-webkit-scrollbar{
   display: none;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.numBox{
+  background-color: grey;
+  width: 200px;
+  padding: 70px;
+  color: white;
+  border-radius: 12px;
+  font-size: 100px;
+  font: bold;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  flex: auto;
+  align-items: center;
+}
+.btn1{
+  background-color: rgb(19, 94, 34);
+  width: 90px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 10px;
+  color: white;
+  margin-left: 30px;
+}
+.btn2{
+  background-color: rgb(19, 38, 94);
+  width: 90px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 10px;
+  color: white;
+  margin-left: 30px;
 }
 
 
